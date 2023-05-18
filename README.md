@@ -2,10 +2,11 @@
 
 Demonstrates aspnetcore bug #48280 "Exception calling Dispose on IJSInProcessObjectReference instance in Blazor WebAssembly" and a fix from from submitted pull request #48287.
 
-Describe the bug
+## Describe the bug
+
 Calling Dispose on an instance of IJSInProcessObjectReference throws an exception. Only affects Blazor WebAssembly.
 
-Affected versions of DotNet
+## Affected versions of DotNet
 8.0.0-preview.3.23177.8
 8.0.0-preview.4.23260.4
 
