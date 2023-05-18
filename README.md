@@ -7,14 +7,15 @@ Demonstrates aspnetcore bug #48280 "Exception calling Dispose on IJSInProcessObj
 Calling Dispose on an instance of IJSInProcessObjectReference throws an exception. Only affects Blazor WebAssembly.
 
 ## Affected versions of DotNet
-8.0.0-preview.3.23177.8
+8.0.0-preview.3.23177.8  
 8.0.0-preview.4.23260.4
 
 
 The bug seems to arise from pull #46693. They switched from using IJSUnmarshalledRuntime to JSImport for calling "DotNet.jsCallDispatcher.disposeJSObjectReferenceById" but it fails. The JSImport attribute gives an incorrect location for the function to call.
 
-From
-"aspnetcore/src/JSInterop/Microsoft.JSInterop/src/Implementation/JSInProcessObjectReference.cs"
+From repo  
+dotnet/aspnetcore   
+"aspnetcore/src/JSInterop/Microsoft.JSInterop/src/Implementation/JSInProcessObjectReference.cs"  
 
 ```cs
     [JSImport("DotNet.jsCallDispatcher.disposeJSObjectReferenceById", "blazor-internal")]
