@@ -28,3 +28,6 @@ If switched to the below JSImport it works.
     private static partial void DisposeJSObjectReferenceById([JSMarshalAs<JSType.Number>] long id);
 ```
 
+## Note
+Template used is "Blazor WebAssembly App Empty". Only the "Program.cs" has been modified.
+
